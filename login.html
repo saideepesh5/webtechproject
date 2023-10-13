@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ body {
+    font-family: Arial, sans-serif;
+ background-color: black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ margin: 0;
+ overflow: hidden;
+ }
+ .login-container {
+    background: black;
+ border: 2px solid #00ccff;
+ border-radius: 5px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ padding: 20px;
+ text-align: center;
+ width: 100%;
+ max-width: 400px;
+
+    
+ }
+ .login-text {
+    color: #00ccff;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700px;
+ font-size: 24px;
+ margin: 10px;
+ animation: float-in 2s ease-in-out 0.5s both;
+ }
+ .login-form {
+ text-align: left;
+ }
+ .form-group {
+ margin-bottom: 15px;
+ }
+ .form-group label {
+ display: block;
+ font-weight: bold;
+ }
+ .form-group input, .form-group select {
+ width: 100%;
+ padding: 8px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ }
+ .login-button,.reset-button {
+ background: #00ccff;
+ color: #fff;
+ padding: 10px 20px;
+ border: none;
+ border-radius: 50px;
+ cursor: pointer;
+ }
+ @keyframes float-in {
+ from {
+ transform: translateX(-50%);
+ opacity: 0;
+ }
+ to {
+ transform: translateX(0);
+ opacity: 1;
+ }
+ }
+ </style>
+</head>
+<body>
+    <h1 style="text-align: left;  color: #00ccff;font-family: 'Times New Roman', Times, serif;">Login   :</h1>
+    <div class="login-container">
+ <h3 class="login-text">Welcome to Our Website</h3>
+ <form class="login-form" id="login-form">
+ <div class="form-group">
+ <label for="name" style="color: #00ccff;">Name:</label>
+ <input type="text" id="name" name="name" required>
+ </div>
+ <div class="form-group">
+ <label for="class-course" style="color:#00ccff">Class/Course:</label>
+ <select id="class-course" name="class-course" required>
+    <option value="none" selected style="color: #00ccff;">select</option>
+ <option value="Class 12" style="color: #ee00ff;">Class 12</option>
+ <option value="B.Tech"style="color: #ee00ff;">B.Tech</option>
+ <option value="B.Sc"style="color: #ee00ff;">B.Sc</option>
+ <option value="BCA"style="color:#ee00ff;">BCA</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <label for="city" style="color: #00ccff;">City:</label>
+ <input type="text" id="city" name="city" required>
+ </div>
+ <div class="form-group">
+ <label for="email" style="color: #00ccff;">Email:</label>
+ <input type="email" id="email" name="email" required>
+ </div>
+ <div class="form-group">
+ <label for="password" style="color: #00ccff;">Create Password:</label>
+ <input type="password" id="password" name="password" required>
+ </div>
+ <div>
+    <button type="submit" class="login-button">Login</button>
+    <button type="reset" class="reset-button">Reset</button>
+    <!-- <button type="submit" class="signup-button">SignUp</button> -->
+ </div>
+ </form>
+ </div>
+</body>
+</html>

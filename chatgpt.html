@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Cube with Different Face Colors</title>
+    <link rel="stylesheet" href="try.css">
+    <style>
+        .container {
+            position: relative;
+            width: 100px; /* Adjust the size as needed */
+            height: 100px; /* Adjust the size as needed */
+            margin: 10px; /* Add margin to create space from the top and right */
+            text-align: right;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 5s infinite linear;
+        }
+
+        .face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #333;
+            line-height: 70px;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .front { transform: translateZ(50px); background-color: #FF5733; }
+        .back { transform: rotateY(180deg) translateZ(50px); background-color: #33FF57; }
+        .right { transform: rotateY(90deg) translateZ(50px); background-color: #5733FF; }
+        .left { transform: rotateY(-90deg) translateZ(50px); background-color: #FF3357; }
+        .top { transform: rotateX(90deg) translateZ(50px); background-color: #57FF33; }
+        .bottom { transform: rotateX(-90deg) translateZ(50px); background-color: #3357FF; }
+
+        @keyframes rotate {
+            0% { transform: rotateX(0deg) rotateY(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cube pers650">
+            <div class="face front">1</div>
+            <div class "face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+        </div>
+    </div>
+</body>
+</html>
